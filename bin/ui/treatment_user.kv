@@ -1,0 +1,31 @@
+#:kivy 1.9.1
+
+#:include bin/ui/dynamic_classes.kv
+#:import LANGUAGE bin.global_variables.LANGUAGE
+
+BoxLayout:
+    id: treatment_user_layout
+    orientation: 'vertical'
+
+    language: LANGUAGE
+
+    active_value: False
+    on_active_value: antibiotic_switch.active = args[1]
+
+    # User antibiotic
+    BoxLayout:
+        size_hint_y: None
+        height: dp(20)
+
+        OptionText:
+            id: treatment_user_administer
+            text: root.language["treatment_user_administer"]
+
+    BoxLayout:
+        size_hint_y: None
+        height: dp(25)
+
+        SmallerSwitch:
+            id: antibiotic_switch
+            active: root.active_value
+            on_active: app.user_administer, root.active_value = args[1], args[1]

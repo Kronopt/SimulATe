@@ -1,0 +1,269 @@
+#:kivy 1.9.1
+
+# All kv files must include this file, otherwise some settings won't be applied
+
+#:import LANGUAGE bin.global_variables.LANGUAGE
+
+<TreatmentType>:
+    orientation: 'vertical'
+    size_hint_y: None
+    height: dp(125)
+
+    # language dictionary
+    language: LANGUAGE
+
+    # toggles to be disabled/enabled ids
+    toggle_ids: [toggle_classic, toggle_adaptive, toggle_user]
+    options: treatment_options
+
+    GridLayout:
+        cols: 3
+
+        TreatmentToggle:
+            id: toggle_classic
+            language: root.language
+
+            size_hint_y: None
+            size_hint_x: 1
+            height: dp(25)
+            font_size: dp(13)
+            text: root.language["toggle_classic"]
+            group: "Treatment Type"
+            on_release: root.clear_treatment_widget(), root.ids.treatment_options.add_widget(self.selected_treatment("Classic", app)), app.assign_treatment("Classic")
+
+        TreatmentToggle:
+            id: toggle_adaptive
+            language: root.language
+
+            size_hint_y: None
+            size_hint_x: 1
+            height: dp(25)
+            font_size: dp(13)
+            text: root.language["toggle_adaptive"]
+            group: "Treatment Type"
+            on_release: root.clear_treatment_widget(), root.ids.treatment_options.add_widget(self.selected_treatment("Adaptive", app)), app.assign_treatment("Adaptive")
+
+        TreatmentToggle:
+            id: toggle_user
+            language: root.language
+
+            size_hint_y: None
+            size_hint_x: 1
+            height: dp(25)
+            font_size: dp(13)
+            text: root.language["toggle_user"]
+            group: "Treatment Type"
+            on_release: root.clear_treatment_widget(), root.ids.treatment_options.add_widget(self.selected_treatment("User", app)), app.assign_treatment("User")
+
+    BoxLayout:
+        id: treatment_options
+        size_hint_y: None
+        height: dp(100)
+
+<-SmallerSwitch@Switch>:
+    active_norm_pos: max(0., min(1., (int(self.active) + self.touch_distance / sp(41))))
+    canvas:
+        Color:
+            rgb: 1, 1, 1
+        Rectangle:
+            source: 'atlas://data/images/defaulttheme/switch-background{}'.format('_disabled' if self.disabled else '')
+            size: sp(69), sp(25)
+            pos: int(self.center_x - sp(34)), int(self.center_y - sp(16))
+        Rectangle:
+            source: 'atlas://data/images/defaulttheme/switch-button{}'.format('_disabled' if self.disabled else '')
+            size: sp(41), sp(25)
+            pos: int(self.center_x - sp(41) + self.active_norm_pos * sp(41)), int(self.center_y - sp(16))
+
+<OptionsLayout@BoxLayout>:
+    size_hint_y: None
+    width: dp(240)
+    orientation: 'vertical'
+    padding: dp(5)
+
+<-SmallerSlider>:
+    canvas:
+        Color:
+            rgb: (1, 1, 1) if root.disabled == False else (0.45, 0.45, 0.45)
+        BorderImage:
+            border: 0, 18, 0, 18
+            pos: self.x + self.padding, self.center_y - sp(12)
+            size: self.width - self.padding * 2, sp(25)
+            source: 'atlas://data/images/defaulttheme/slider{}_background{}'.format(self.orientation[0], '')
+        Rectangle:
+            pos: self.value_pos[0] - sp(12), self.center_y - sp(11)
+            size: (sp(21), sp(21))
+            source: 'atlas://data/images/defaulttheme/slider_cursor{}'.format('')
+    size_hint_x: None
+    width: dp(230)
+
+<OptionText>:
+    size_hint_y: None
+    height: dp(30)
+    text_size: self.size
+    font_size: dp(13)
+
+<ExponentButton>:
+    size_hint: None, None
+    height: dp(17)
+    width: dp(28)
+    sync_height: True
+    text_autoupdate: True
+    text_size: self.size
+    font_size: dp(13)
+
+<SpinnerOption>:
+    text_size: self.size
+    font_size: dp(13)
+
+<ScrollView>:
+    size_hint: None, None
+    do_scroll_x: False
+    scroll_timeout: 0.000001
+
+<AntibioticResistanceSlider@BoxLayout>:
+    orientation: "vertical"
+
+    antibiotic_name: ""
+    unit: ""
+    default_value: 0
+
+    BoxLayout:
+        size_hint_y: None
+        height: dp(20)
+
+        OptionText:
+            text: "  " + root.antibiotic_name
+
+        OptionText:
+            halign: "right"
+            text: "%.2f " % antibiotic_slider.value + root.unit + "  " if antibiotic_slider.value % 1 != 0 else str(int(antibiotic_slider.value)) + " " + root.unit + "  "
+
+    BoxLayout:
+        size_hint_y: None
+        height: dp(25)
+
+        SmallerSlider:
+            id: antibiotic_slider
+            min: 0
+            max: 1
+            value: root.default_value
+            step: 0.01
+            on_value: root.default_value = self.value
+
+<BacteriaAntibioticResistanceOptionsButton>:
+    orientation: "vertical"
+
+    language: LANGUAGE
+    dropdown_id: dropdown_box.__self__
+
+    bacteria_name: ""
+    antibiotic_inhibition_unit: ""
+    default_values_button_text: ""
+    lincosamides_default_value: 0
+    macrolides_default_value: 0
+    penicillins_default_value: 0
+    quinolones_default_value: 0
+    streptogramins_default_value: 0
+    sulfonamides_default_value: 0
+    tetacyclines_default_value: 0
+    trimethoprims_default_value: 0
+
+    canvas_color: 1, 1, 1
+
+    Button:
+        id: main_button
+        size_hint_y: None
+        height: dp(28)
+
+        # spinner-like look
+        background_normal: 'atlas://data/images/defaulttheme/spinner'
+        background_disabled_normal: 'atlas://data/images/defaulttheme/spinner_disabled'
+        background_down: 'atlas://data/images/defaulttheme/spinner_pressed'
+        on_release: dropdown_box.open(self)
+        on_parent: dropdown_box.dismiss()
+        text: root.bacteria_name
+
+        # rectangle label (to be colored)
+        canvas:
+            Color:
+                rgb: root.canvas_color
+            Rectangle:
+                pos: main_button.width - 25, main_button.center_y - 3
+                size: dp(7), dp(7)
+
+    DropDown:
+        id: dropdown_box
+
+        BoxLayout:
+            id: slider_box
+            orientation: "vertical"
+            size_hint: None, None
+            height: dp(405)
+            width: main_button.width
+
+            canvas:
+                Color:
+                    rgb: 0.2, 0.2, 0.2
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            BoxLayout:
+                id: antibiotic_resistance_sliders
+                orientation: "vertical"
+
+                AntibioticResistanceSlider:
+                    antibiotic_name: root.language["lincosamides"]
+                    unit: root.antibiotic_inhibition_unit
+                    default_value: root.lincosamides_default_value
+                    on_default_value: root.lincosamides_default_value = args[1]
+                AntibioticResistanceSlider:
+                    antibiotic_name: root.language["macrolides"]
+                    unit: root.antibiotic_inhibition_unit
+                    default_value: root.macrolides_default_value
+                    on_default_value: root.macrolides_default_value = args[1]
+                AntibioticResistanceSlider:
+                    antibiotic_name: root.language["penicillins"]
+                    unit: root.antibiotic_inhibition_unit
+                    default_value: root.penicillins_default_value
+                    on_default_value: root.penicillins_default_value = args[1]
+                AntibioticResistanceSlider:
+                    antibiotic_name: root.language["quinolones"]
+                    unit: root.antibiotic_inhibition_unit
+                    default_value: root.quinolones_default_value
+                    on_default_value: root.quinolones_default_value = args[1]
+                AntibioticResistanceSlider:
+                    antibiotic_name: root.language["streptogramins"]
+                    unit: root.antibiotic_inhibition_unit
+                    default_value: root.streptogramins_default_value
+                    on_default_value: root.streptogramins_default_value = args[1]
+                AntibioticResistanceSlider:
+                    antibiotic_name: root.language["sulfonamides"]
+                    unit: root.antibiotic_inhibition_unit
+                    default_value: root.sulfonamides_default_value
+                    on_default_value: root.sulfonamides_default_value = args[1]
+                AntibioticResistanceSlider:
+                    antibiotic_name: root.language["tetacyclines"]
+                    unit: root.antibiotic_inhibition_unit
+                    default_value: root.tetacyclines_default_value
+                    on_default_value: root.tetacyclines_default_value = args[1]
+                AntibioticResistanceSlider:
+                    antibiotic_name: root.language["trimethoprims"]
+                    unit: root.antibiotic_inhibition_unit
+                    default_value: root.trimethoprims_default_value
+                    on_default_value: root.trimethoprims_default_value = args[1]
+
+            # default values button
+            BoxLayout:
+                size_hint_y: None
+                height: dp(32)
+                padding: dp(2)
+
+                Widget
+                Button:
+                    size_hint_x: None
+                    width: dp(160)
+                    text: root.default_values_button_text
+                    on_release:  root.default_values(root.bacteria_name.lower(), app)
+
+                Widget

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<strings>
+    <string id="scenario_selection_button" language="en">Scenario</string>
+    <string id="scenario_selection_button" language="pt">Cenário</string>
+    <string id="selected_scenario_1" language="en">Single Population</string>
+    <string id="selected_scenario_1" language="pt">Uma População</string>
+    <string id="selected_scenario_2" language="en">Microbiome</string>
+    <string id="selected_scenario_2" language="pt">Microbioma</string>
+    <string id="language_main_button" language="en">Language</string>
+    <string id="language_main_button" language="pt">Linguagem</string>
+    <string id="language_button_english" language="en">English</string>
+    <string id="language_button_portuguese" language="en">Português</string>
+    <string id="save_menu" language="en">Save</string>
+    <string id="save_menu" language="pt">Guardar</string>
+
+    <string id="select_microbiome_label" language="en"> Microbiome</string>
+    <string id="select_microbiome_label" language="pt"> Microbioma</string>
+    <string id="select_microbiome_button" language="en">Select a Microbiome</string>
+    <string id="select_microbiome_button" language="pt">Selecciona o Microbioma</string>
+    <string id="gut_enterotype_button" language="en">Gut Enterotype</string>
+    <string id="gut_enterotype_button" language="pt">Enterótipo Intestinal</string>
+    <string id="antibiotic_resistance" language="en"> Antibiotic Inhibition</string>
+    <string id="antibiotic_resistance" language="pt"> Inibição pelo Antibiótico</string>
+    <string id="antibiotic_concentration" language="en"> Antibiotic Concentration</string>
+    <string id="antibiotic_concentration" language="pt"> Concentração de Antibiótico</string>
+    <string id="antibiotic_concentrations" language="en"> Antibiotic Concentrations</string>
+    <string id="antibiotic_concentrations" language="pt"> Concentrações de Antibióticos</string>
+    <string id="default_values_button" language="en">Default Values</string>
+    <string id="default_values_button" language="pt">Valores por Omissão</string>
+    <string id="default_concentration_button" language="en">Default Concentrations</string>
+    <string id="default_concentration_button" language="pt">Concentrações por Omissão</string>
+    <string id="all_antibiotics_text" language="en">All Antibiotics:</string>
+    <string id="all_antibiotics_text" language="pt">Todos os Antibióticos:</string>
+    <string id="administer_none_button" language="en">Stop Administration</string>
+    <string id="administer_none_button" language="pt">Parar Administração</string>
+
+    <string id="bacteroides" language="en">Bacteroides</string>
+    <string id="faecalibacterium" language="en">Faecalibacterium</string>
+    <string id="roseburia" language="en">Roseburia</string>
+    <string id="bifidobacterium" language="en">Bifidobacterium</string>
+    <string id="lachnospiraceae" language="en">Lachnospiraceae</string>
+    <string id="parabacteroides" language="en">Parabacteroides</string>
+    <string id="alistipes" language="en">Alistipes</string>
+    <string id="anaerostipes" language="en">Anaerostipes</string>
+    <string id="acidaminococcus" language="en">Acidaminococcus</string>
+    <string id="collinsella" language="en">Collinsella</string>
+    <string id="prevotella" language="en">Prevotella</string>
+    <string id="streptococcus" language="en">Streptococcus</string>
+    <string id="coprococcus" language="en">Coprococcus</string>
+    <string id="akkermansia" language="en">Akkermansia</string>
+    <string id="ruminococcus" language="en">Ruminococcus</string>
+    <string id="blautia" language="en">Blautia</string>
+
+    <string id="lincosamides" language="en">Lincosamides</string>
+    <string id="lincosamides" language="pt">Lincosamidas</string>
+    <string id="macrolides" language="en">Macrolides</string>
+    <string id="macrolides" language="pt">Macrolídeos</string>
+    <string id="penicillins" language="en">Penicillins</string>
+    <string id="penicillins" language="pt">Penicilinas</string>
+    <string id="quinolones" language="en">Quinolones</string>
+    <string id="quinolones" language="pt">Quinolonas</string>
+    <string id="streptogramins" language="en">Streptogramins</string>
+    <string id="streptogramins" language="pt">Streptograminas</string>
+    <string id="sulfonamides" language="en">Sulfonamides</string>
+    <string id="sulfonamides" language="pt">Sulfonamidas</string>
+    <string id="tetacyclines" language="en">Tetacyclines</string>
+    <string id="tetacyclines" language="pt">Tetraciclinas</string>
+    <string id="trimethoprims" language="en">Trimethoprims</string>
+    <string id="trimethoprims" language="pt">Trimetoprimas</string>
+
+    <string id="antibiotic_sensitive_bacteria_label" language="en"> Antibiotic Sensitive Bacteria</string>
+    <string id="antibiotic_sensitive_bacteria_label" language="pt"> Bactéria Sensível ao Antibiótico</string>
+    <string id="antibiotic_resistant_bacteria_label" language="en"> Antibiotic Resistant Bacteria</string>
+    <string id="antibiotic_resistant_bacteria_label" language="pt">Bactéria Resistente ao Antibiótico</string>
+    <string id="bacteria_initial_density" language="en">Initial Density</string>
+    <string id="bacteria_initial_density" language="pt">Densidade Inicial</string>
+    <string id="bacteria_initial_density_value" language="en"> cell/μl</string>
+    <string id="bacteria_initial_density_value" language="pt"> cél/μl</string>
+    <string id="bacteria_growth_rate" language="en">Growth Rate</string>
+    <string id="bacteria_growth_rate" language="pt">Taxa de Crescimento</string>
+    <string id="bacteria_growth_rate_value" language="en"> day−¹</string>
+    <string id="bacteria_growth_rate_value" language="pt"> dia−¹</string>
+    <string id="bacteria_antibiotic_inhibition" language="en">Antibiotic Inhibition</string>
+    <string id="bacteria_antibiotic_inhibition" language="pt">Inibição, Antibiótico</string>
+    <string id="bacteria_antibiotic_inhibition_value" language="en"> l/mg/day</string>
+    <string id="bacteria_antibiotic_inhibition_value" language="pt"> l/mg/dia</string>
+    <string id="both_bacteria_label" language="en"> Both Bacteria</string>
+    <string id="both_bacteria_label" language="pt"> Ambas as Bactéria</string>
+    <string id="both_bacteria_lymphocyte_inhibition" language="en">Lymphocyte Inhibition</string>
+    <string id="both_bacteria_lymphocyte_inhibition" language="pt">Inibição, Linfócitos</string>
+    <string id="both_bacteria_lymphocyte_inhibition_value" language="en"> μl/cell/day</string>
+    <string id="both_bacteria_lymphocyte_inhibition_value" language="pt"> μl/cél/dia</string>
+    <string id="both_bacteria_density_death" language="en">Host Death Density</string>
+    <string id="both_bacteria_density_death" language="pt">Morte do Hospedeiro</string>
+    <string id="both_bacteria_density_death_value" language="en">cell/μl</string>
+    <string id="both_bacteria_density_death_value" language="pt">cél/μl </string>
+    <string id="immune_system_label" language="en"> Immune System</string>
+    <string id="immune_system_label" language="pt"> Sistema Imunitário</string>
+    <string id="immune_system_initial_density" language="en">Initial Precursor Cell Density</string>
+    <string id="immune_system_initial_density" language="pt">Densidade Inicial, Precursor</string>
+    <string id="immune_system_proliferation_rate" language="en">Proliferation Rate</string>
+    <string id="immune_system_proliferation_rate" language="pt">Taxa de Proliferação</string>
+    <string id="immune_system_half_maximum_growth" language="en">Half Maximum Growth</string>
+    <string id="immune_system_half_maximum_growth" language="pt">Meia Taxa de Crescimento</string>
+    <string id="immune_system_effector_decay_rate" language="en">Effector Cells Decay Rate</string>
+    <string id="immune_system_effector_decay_rate" language="pt">Decaimento, Efectores</string>
+    <string id="immune_system_memory_conversion" language="en">Memory Cells Conversion</string>
+    <string id="immune_system_memory_conversion" language="pt">Conversão, Células de Memória</string>
+    <string id="antibiotic_label" language="en"> Antibiotic</string>
+    <string id="antibiotic_label" language="pt"> Antibiótico</string>
+    <string id="antibiotic_mean_concentration" language="en">Mean Concentration</string>
+    <string id="antibiotic_mean_concentration" language="pt">Concentração Média</string>
+    <string id="antibiotic_mean_concentration_value" language="en"> mg/l</string>
+    <string id="antibiotic_treatment_type" language="en">Treatment Type</string>
+    <string id="antibiotic_treatment_type" language="pt">Tipo de Tratamento</string>
+
+    <string id="toggle_classic" language="en">Classic</string>
+    <string id="toggle_classic" language="pt">Clássico</string>
+    <string id="toggle_adaptive" language="en">Adaptive</string>
+    <string id="toggle_adaptive" language="pt">Adaptativo</string>
+    <string id="toggle_user" language="en">User</string>
+    <string id="toggle_user" language="pt">Utilizador</string>
+    <string id="treatment_adaptive_symptoms" language="en">Symptoms at Density</string>
+    <string id="treatment_adaptive_symptoms" language="pt">Início de Sintomas</string>
+    <string id="treatment_classic_delay" language="en">Delay</string>
+    <string id="treatment_classic_delay" language="pt">Atraso</string>
+    <string id="treatment_classic_delay_value" language="en"> day</string>
+    <string id="treatment_classic_delay_value" language="pt"> dia</string>
+    <string id="treatment_classic_duration" language="en">Duration</string>
+    <string id="treatment_classic_duration" language="pt">Duração</string>
+    <string id="treatment_user_administer" language="en">Administer</string>
+    <string id="treatment_user_administer" language="pt">Administrar</string>
+
+    <string id="popup_save_dialog_title" language="en">Where to Save the current scenario's data</string>
+    <string id="popup_save_dialog_title" language="pt">Onde Guardar os dados do cenário seleccionado</string>
+    <string id="popup_save_dialog_cancel" language="en">Cancel</string>
+    <string id="popup_save_dialog_cancel" language="pt">Cancelar</string>
+    <string id="popup_saving_title" language="en">Saved!</string>
+    <string id="popup_saving_title" language="pt">Guardado!</string>
+    <string id="popup_saving_message" language="en">Current Image, Plot Data and Options saved.</string>
+    <string id="popup_saving_message" language="pt">Imagem, Dados dos Gráficos e Opções actuais guardadas.</string>
+    <string id="popup_missing_treatment_title" language="en">Warning</string>
+    <string id="popup_missing_treatment_title" language="pt">Aviso</string>
+    <string id="popup_missing_treatment_message" language="en">Select a Treatment Type...</string>
+    <string id="popup_missing_treatment_message" language="pt">Selecciona o Tipo de Tratamento...</string>
+    <string id="popup_missing_microbiome_title" language="en">Warning</string>
+    <string id="popup_missing_microbiome_title" language="pt">Aviso</string>
+    <string id="popup_missing_microbiome_message" language="en">Select a Microbiome...</string>
+    <string id="popup_missing_microbiome_message" language="pt">Selecciona um Microbioma...</string>
+    <string id="popup_host_death_title" language="en">Host has died.</string>
+    <string id="popup_host_death_title" language="pt">O hospedeiro morreu.</string>
+    <string id="popup_host_death_message" language="en">Total bacteria density reached the "Host Death Density" value.</string>
+    <string id="popup_host_death_message" language="pt">A densidade total de bactérias atingiu o valor de "Morte do Hospedeiro".</string>
+    <string id="popup_bacteria_death_title" language="en">Infection cleared</string>
+    <string id="popup_bacteria_death_title" language="pt">Infecção suprimida</string>
+    <string id="popup_bacteria_death_message" language="en">All bacteria were killed.</string>
+    <string id="popup_bacteria_death_message" language="pt">Todas as bactérias foram eliminadas.</string>
+
+    <string id="graph_x_axis" language="en">Time, Days</string>
+    <string id="graph_x_axis" language="pt">Tempo, Dias</string>
+    <string id="graph_bacteria_y_axis" language="en">Cells, cell/μl</string>
+    <string id="graph_bacteria_y_axis" language="pt">Células, cél/μl</string>
+    <string id="graph_antibiotic_y_axis" language="en">Antibiotic, mg/l</string>
+    <string id="graph_antibiotic_y_axis" language="pt">Antibiótico, mg/l</string>
+    <string id="scenario_2_bacteria_y_axis_relative_frequency" language="en">Bacteria/Total, cell/μl</string>
+    <string id="scenario_2_bacteria_y_axis_relative_frequency" language="pt">Bactérias/Total, cél/μl</string>
+    <string id="scenario_2_antibiotic_y_axis" language="en">Antibiotics, mg/l</string>
+    <string id="scenario_2_antibiotic_y_axis" language="pt">Antibióticos, mg/l</string>
+
+    <string id="speed_slider_text" language="en">Simulation Speed</string>
+    <string id="speed_slider_text" language="pt">Velocidade da Simulação</string>
+    <string id="speed_slider_text_short" language="en">Speed</string>
+    <string id="speed_slider_text_short" language="pt">Velocidade</string>
+
+    <string id="restart_button" language="en">Restart</string>
+    <string id="restart_button" language="pt">Recomeçar</string>
+    <string id="start_button" language="en">Start</string>
+    <string id="start_button" language="pt">Começar</string>
+    <string id="pause_button" language="en">Pause</string>
+    <string id="pause_button" language="pt">Pausa</string>
+    <string id="continue_button" language="en">Continue</string>
+    <string id="continue_button" language="pt">Continuar</string>
+</strings>

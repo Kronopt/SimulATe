@@ -1,0 +1,14 @@
+pyinstaller SimulATe.pyw ^
+--add-data "LICENSE;." ^
+--add-data "README.md;." ^
+--add-data "bin/options.txt;bin" ^
+--add-data "bin/ui/dynamic_classes.kv;bin/ui" ^
+--add-data "bin/ui/main_layout.kv;bin/ui" ^
+--add-data "bin/ui/text.xml;bin/ui" ^
+--add-data "bin/ui/treatment_adaptive.kv;bin/ui" ^
+--add-data "bin/ui/treatment_classic.kv;bin/ui" ^
+--add-data "bin/ui/treatment_user.kv;bin/ui" ^
+--icon "bin/ui/icon.ico" ^
+--noconsole ^
+--clean ^
+--win-private-assemblies

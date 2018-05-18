@@ -1,0 +1,74 @@
+#:kivy 1.9.1
+
+#:include bin/ui/dynamic_classes.kv
+#:import LANGUAGE bin.global_variables.LANGUAGE
+
+BoxLayout:
+    id: treatment_classic_layout
+    orientation: 'vertical'
+
+    language: LANGUAGE
+
+    delay_value: 0
+    on_delay_value: delay.value = args[1]
+    duration_value: 0
+    on_duration_value: duration.value = args[1]
+
+    # Delay
+    BoxLayout:
+        size_hint_y: None
+        height: dp(20)
+
+        OptionText:
+            id: treatment_classic_delay
+            on_disabled: self.disabled = False
+            text: root.language["treatment_classic_delay"]
+
+        OptionText:
+            id: treatment_classic_delay_value
+            size_hint_x: None
+            width: dp(80)
+            halign: "right"
+            on_disabled: self.disabled = False
+            text: str(delay.value) + root.language["treatment_classic_delay_value"] if delay.value % 1 != 0 else str(int(delay.value)) + root.language["treatment_classic_delay_value"]
+
+    BoxLayout:
+        size_hint_y: None
+        height: dp(25)
+
+        SmallerSlider:
+            id: delay
+            min: 1
+            max: 15
+            value: root.delay_value
+            on_value: root.delay_value, app.classic_delay = args[1], self.value
+            step: 0.1
+
+    # Duration
+    BoxLayout:
+        size_hint_y: None
+        height: dp(20)
+
+        OptionText:
+            id: treatment_classic_duration
+            on_disabled: self.disabled = False
+            text: root.language["treatment_classic_duration"]
+
+        OptionText:
+            size_hint_x: None
+            width: dp(80)
+            halign: "right"
+            on_disabled: self.disabled = False
+            text: str(duration.value) + root.language["treatment_classic_delay_value"] if duration.value % 1 != 0 else str(int(duration.value)) + root.language["treatment_classic_delay_value"]
+
+    BoxLayout:
+        size_hint_y: None
+        height: dp(25)
+
+        SmallerSlider:
+            id: duration
+            min: 3
+            max: 15
+            value: root.duration_value
+            on_value: root.duration_value, app.classic_duration = args[1], self.value
+            step: 0.1

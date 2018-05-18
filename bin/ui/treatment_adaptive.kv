@@ -1,0 +1,59 @@
+#:kivy 1.9.1
+
+#:include bin/ui/dynamic_classes.kv
+#:import LANGUAGE bin.global_variables.LANGUAGE
+
+BoxLayout:
+    id: treatment_adaptive_layout
+    orientation: 'vertical'
+
+    language: LANGUAGE
+
+    exponent_value: ' e06'
+    on_exponent_value: exponent_button.text = args[1]
+    slider_value: 1
+    on_slider_value: pathogens_symptoms.value = args[1]
+
+    # Pathogens causing symptoms
+    BoxLayout:
+        size_hint_y: None
+        height: dp(20)
+
+        OptionText:
+            id: treatment_adaptive_symptoms
+            on_disabled: self.disabled = False
+            text: root.language["treatment_adaptive_symptoms"]
+
+        OptionText:
+            size_hint_x: None
+            width: dp(40)
+            halign: "right"
+            on_disabled: self.disabled = False
+            text: str(pathogens_symptoms.value)
+
+        # Exponent selection
+        ExponentButton:
+            id: exponent_button
+            text: root.exponent_value
+            on_text: app.adaptive_symptoms_at_bacteria_density_exponent, root.exponent_value = 10**int(args[1][-1]), args[1]
+            values: (' e03', ' e04', ' e05', ' e06')
+
+        OptionText:
+            id: treatment_adaptive_symptoms_value
+            size_hint_x: None
+            width: dp(36)
+            halign: "right"
+            on_disabled: self.disabled = False
+            text: root.language["both_bacteria_density_death_value"]
+
+    BoxLayout:
+        size_hint_y: None
+        height: dp(25)
+
+        SmallerSlider:
+            id: pathogens_symptoms
+            min: 1
+            max: 9.99
+            value: root.slider_value
+            on_value: root.slider_value, app.adaptive_symptoms_at_bacteria_density_value = args[1], self.value
+            step: 0.01
