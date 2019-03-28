@@ -1132,7 +1132,7 @@ class SimulATeApp(App):
             # resets xy resizes
             global_variables.BACTERIA_ASSORTMENT.get_graph_widget().xmax = 10
             global_variables.BACTERIA_ASSORTMENT.get_graph_widget().x_ticks_major = 1
-            global_variables.BACTERIA_ASSORTMENT.get_graph_widget().ymax = 10**2
+            global_variables.BACTERIA_ASSORTMENT.get_graph_widget().ymax = 10**3
             global_variables.ANTIBIOTIC_ASSORTMENT.get_graph_widget().xmax = 10
             global_variables.ANTIBIOTIC_ASSORTMENT.get_graph_widget().x_ticks_major = 1
             global_variables.ANTIBIOTIC_ASSORTMENT.get_graph_widget().ymax = 20
@@ -1770,7 +1770,7 @@ class SimulATeApp(App):
             # avoids zero division errors
             sensitive_bacteria_density = data[1] if data[1] > 0 else 0.0001
             resistant_bacteria_density = data[2] if data[2] > 0 else 0.0001
-            effector_density = data[4] if data[4] > 0 else 0.0001
+            immune_cells_density = data[3] + data[4] + data[5] if data[3] + data[4] + data[5] > 0 else 0.0001
             antibiotic_concentration = _self.antibiotic_mean_concentration
 
             # if both bacteria are dead or host death threshold is reached, stop generating values
@@ -1778,7 +1778,7 @@ class SimulATeApp(App):
                             sensitive_bacteria_density + resistant_bacteria_density < _self.host_death_density):
                 _sensitive_bacteria_plot.points.append((time, sensitive_bacteria_density))
                 _resistant_bacteria_plot.points.append((time, resistant_bacteria_density))
-                _immune_plot.points.append((time, effector_density))
+                _immune_plot.points.append((time, immune_cells_density))
                 _total_bacteria_plot.points.append((time, sensitive_bacteria_density + resistant_bacteria_density))
 
                 # treatment type logic

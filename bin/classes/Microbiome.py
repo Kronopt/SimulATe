@@ -44,7 +44,7 @@ class Microbiome(object):
             ymax = 1
         else:
             ymin = 1
-            ymax = 10**2
+            ymax = 10**3
 
         self._graph_widget = Graph(ylabel=language[graph_y_axis],
                                    xmin=0, xmax=10, x_ticks_major=1, x_ticks_minor=4, x_grid_label=True,
