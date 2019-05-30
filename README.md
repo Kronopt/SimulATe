@@ -54,6 +54,9 @@ In each scenario you will be presented with a lot of customizable parameters whi
 
 For a more detailed usage guide, please refer to the [wiki](https://github.com/Kronopt/SimulATe/wiki).
 
+# Publication
+Pedro H C David, Xana Sá-Pinto, Teresa Nogueira, Using SimulATe to model the effects of antibiotic selective pressure on the dynamics of pathogenic bacterial populations, Biology Methods and Protocols, Volume 4, Issue 1, 2019, bpz004, https://doi.org/10.1093/biomethods/bpz004
+
 # Acknowledgments
 * Francisco Dionísio
 * Xana Sá-Pinto
