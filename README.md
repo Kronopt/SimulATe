@@ -3,7 +3,7 @@
 
 SimulATe (**Simul**ator of **A**ntibiotic **T**herapy **E**ffects on the dynamics of bacterial populations) is a program that simulates the effects of the administration of antibiotics on microbial populations. Its main goals are: a) to be used as a teaching tool for students, to facilitate learning about microbial population dynamics and, more precisely, the role of antibiotics as resistance selection agents and as microbiome disruption agents; and b) to be used as a testing tool for researchers in the field of antibiotic resistance.
 
-Authors: **Pedro HC David**, **Teresa Nogueira**
+Authors: **[Pedro HC David](https://github.com/Kronopt)**, **[Xana Sá-Pinto](https://orcid.org/0000-0002-6049-110X)**, **[Teresa Nogueira](https://orcid.org/0000-0002-0059-5177)**
 
 ![Screenshot](/screenshot.png?raw=true "SimulATe Screenshot")
 
@@ -57,9 +57,12 @@ For a more detailed usage guide, please refer to the [wiki](https://github.com/K
 # Publication
 Pedro H C David, Xana Sá-Pinto, Teresa Nogueira, Using SimulATe to model the effects of antibiotic selective pressure on the dynamics of pathogenic bacterial populations, Biology Methods and Protocols, Volume 4, Issue 1, 2019, bpz004, https://doi.org/10.1093/biomethods/bpz004
 
+# Other Research
+Teresa Nogueira, Pedro H C David, Joël Pothier, Antibiotics as both friends and foes of the human gut microbiome: The microbial community approach, Drug Development Research, 80: 86– 97, 2019, https://doi.org/10.1002/ddr.21466
+
 # Acknowledgments
-* Francisco Dionísio
-* Xana Sá-Pinto
+* [Francisco Dionísio](https://orcid.org/0000-0002-3653-1511)
+* [dyogurt](https://github.com/dyogurt)
 
 # License
 * SimulATe is distributed under the terms of the [GPL-3.0 License](https://github.com/Kronopt/SimulATe/blob/master/LICENSE)
