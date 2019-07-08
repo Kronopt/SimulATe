@@ -26,7 +26,7 @@ You can also download or clone this repository and install the following depende
 ## Linux
 To install SimulATe on __Linux__, download or clone this repository and install the following dependencies:
 * [Python 2.7](https://www.python.org/downloads/release/python-2713/)
-* Kivy (follow the installation guide [here](https://kivy.org/docs/installation/installation-linux.html))
+* Kivy (follow the installation guide [here](https://kivy.org/docs/installation/installation-linux.html). I recommend using conda, as the dependencies are correctly installed that way)
 
 ## MacOS
 To install SimulATe on __MacOS__, download or clone this repository and install the following dependencies:
